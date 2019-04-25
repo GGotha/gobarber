@@ -18,6 +18,9 @@ class SessionController {
       console.log("Senha invalida");
       return res.redirect("/");
     }
+
+    req.session.user = user;
+
     return res.redirect("/app/dashboard");
   }
 }
