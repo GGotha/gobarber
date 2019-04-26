@@ -16,6 +16,8 @@ routes.post("/signin", SessionController.store);
 routes.get("/signup", guestMiddleware, UserController.create);
 routes.post("/signup", upload.single("avatar"), UserController.store);
 
+routes.get("/app/logout", SessionController.destroy);
+
 routes.use("/app", authMiddleware);
 
 routes.get("/app/dashboard", (req, res) => {
