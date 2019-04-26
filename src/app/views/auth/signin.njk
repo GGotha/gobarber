@@ -4,8 +4,12 @@
   <form action="/signin" method="post">
     <img src="/images/logo.svg" alt="42">
 
+    {% include "_partials/flash.njk" %}
+
     <input type="email" id="email" name="email" placeholder="Seu e-mail" />
     <input type="password" id="password" name="password" placeholder="Sua senha" />
+
+
 
 
     <button type="submit">Entrar</button>
